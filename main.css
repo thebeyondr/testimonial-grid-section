@@ -26,6 +26,7 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 500;
   background-color: var(--light-gray);
+  color: var(--dark-blackish-blue);
 }
 
 blockquote {
@@ -47,6 +48,7 @@ main {
 
 article {
   padding: 3rem;
+  margin: 2rem 0;
 }
 
 .flex {
@@ -80,6 +82,102 @@ article {
 }
 
 .img-round {
-  border: solid 2px var(--light-gray);
+  border: solid 0.2rem rgba(207, 207, 207, 0.5);
   border-radius: 50%;
+}
+
+.bg-grey {
+  background-color: var(--dark-grayish-blue);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-dark {
+  background-color: var(--dark-blackish-blue);
+}
+
+.attribution {
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--dark-grayish-blue);
+}
+
+.link,
+.link:visited {
+  transition: all 0.2s ease-out;
+  text-decoration-color: hsl(216, 100%, 68%);
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: from-font;
+  color: hsl(216, 87%, 45%);
+  padding: 0.1rem;
+}
+
+.link:hover,
+.link:active {
+  cursor: pointer;
+  color: hsl(17, 76%, 56%);
+}
+
+.link:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(92, 157, 255, 0.5);
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 3rem;
+  }
+
+  article {
+    margin: 0;
+  }
+
+  .testimonials {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 0.5fr 1fr;
+    grid-template-areas:
+      "daniel daniel jonathan jonathan"
+      "kira kira kira kira"
+      "jeanette jeanette patrick patrick";
+  }
+
+  #daniel {
+    grid-area: daniel;
+  }
+  #jonathan {
+    grid-area: jonathan;
+  }
+  #jeanette {
+    grid-area: jeanette;
+  }
+  #patrick {
+    grid-area: patrick;
+  }
+  #kira {
+    grid-area: kira;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .testimonials {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+  }
 }
