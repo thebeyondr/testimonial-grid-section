@@ -108,6 +108,7 @@ article {
 .link,
 .link:visited {
   transition: all 0.2s ease-out;
+  -webkit-text-decoration-color: hsl(216, 100%, 68%);
   text-decoration-color: hsl(216, 100%, 68%);
   text-decoration-thickness: 0.125em;
   text-underline-offset: from-font;
