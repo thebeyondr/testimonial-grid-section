@@ -44,7 +44,7 @@ strong {
 }
 
 main {
-  padding: 2rem;
+  padding: 4vw;
 }
 
 article {
@@ -104,7 +104,6 @@ article {
 .attribution {
   display: block;
   text-align: center;
-  /* margin-bottom: 1rem; */
   color: var(--dark-grayish-blue);
 }
 
@@ -151,7 +150,6 @@ article {
 
   .testimonials {
     display: grid;
-    max-width: 76vw;
     height: auto;
     gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
@@ -188,5 +186,10 @@ article {
     grid-template-areas:
       "daniel daniel jonathan kira"
       "jeanette patrick patrick kira";
+  }
+}
+@media only screen and (min-width: 2560px) {
+  html {
+    font-size: 100%;
   }
 }
